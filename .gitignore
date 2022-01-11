@@ -5,6 +5,12 @@
 contracts/cache
 contracts/out
 
+# Inquisitor
+inquisitor/node_modules
+inquisitor/dist
+inquisitor/*.log
+inquisitor/config.json
+
 # Generator
 generator/node_modules
 generator/dist
