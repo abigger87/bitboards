@@ -2,11 +2,12 @@ import fs from "fs"; // Filesystem
 import path from "path"; // Path
 import keccak256 from "keccak256"; // Keccak256 hashing
 import MerkleTree from "merkletreejs"; // MerkleTree.js
-import { logger } from "./utils/logger"; // Logging
 import { getAddress, parseUnits, solidityKeccak256 } from "ethers/lib/utils"; // Ethers utils
 
-// Output file path
-const outputPath: string = path.join(__dirname, "../merkle.json");
+import { logger } from "./utils/logger"; // Logging
+
+// ** Output file path ** //
+const outputPath: string = path.join(__dirname, "../config.json");
 
 // Airdrop recipient addresses and scaled token values
 type AirdropRecipient = {
@@ -16,7 +17,7 @@ type AirdropRecipient = {
   value: string;
 };
 
-export default class Generator {
+export default class Inquisitor {
   // Airdrop recipients
   recipients: AirdropRecipient[] = [];
 
